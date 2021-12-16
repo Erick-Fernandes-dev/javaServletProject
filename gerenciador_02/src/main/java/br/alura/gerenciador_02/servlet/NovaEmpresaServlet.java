@@ -13,10 +13,17 @@ import javax.servlet.http.HttpServletResponse;
 public class NovaEmpresaServlet extends HttpServlet {
 	
 	@Override
-	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) 
+			throws ServletException, IOException {
+	
 		System.out.println("Cadastrando uma nova empresa");
 		String nomeEmpresa = req.getParameter("nome");
+		
+		Empresa empresa = new Empresa();
+		empresa.setNome(nomeEmpresa);
+		
+		Banco banco = new Banco();
+		banco.adciona(empresa);
 		
 		PrintWriter out = resp.getWriter();
 		

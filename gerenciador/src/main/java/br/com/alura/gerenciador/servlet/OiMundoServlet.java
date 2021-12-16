@@ -14,7 +14,7 @@ public class OiMundoServlet extends HttpServlet {
 	
 	
 	@Override
-	protected void service(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		
 		PrintWriter out = resp.getWriter();
 		
