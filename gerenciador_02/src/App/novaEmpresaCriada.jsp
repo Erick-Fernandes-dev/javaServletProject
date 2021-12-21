@@ -1,6 +1,8 @@
 
 <% 
 
+// %= --> substitui o ou.println();
+//Scriptlet
 String nomeEmpresa = (String) request.getAttribute("Empresa");
 System.out.println(nomeEmpresa);
 
@@ -15,6 +17,8 @@ System.out.println(nomeEmpresa);
 Empresa <%= nomeEmpresa %> cadastrada com sucesso!
 
 </body>
+
+
 
 
 </html>

@@ -4,20 +4,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Banco {
-	
-	private static List<Empresa> lista = new ArrayList<Empresa>();
+		
+	private static List<Empresa> lista = new ArrayList<>();
 	
 	static {
 		
-		Empresa empresa1 = new Empresa();
-		empresa1.setNome("Alura");
+		Empresa empresa = new Empresa();
+		empresa.setNome("Algnologia");
 		
 		Empresa empresa2 = new Empresa();
-		empresa2.setNome("Caelum");
+		empresa2.setNome("Alura");
 		
-		Banco.lista.add(empresa1);
+		Banco.lista.add(empresa);
 		Banco.lista.add(empresa2);
-		Banco.lista.add(new Empresa("Google"));
+		Banco.lista.add(new Empresa("Caelum"));
 		
 		
 	}
@@ -27,9 +27,11 @@ public class Banco {
 		Banco.lista.add(empresa);
 	}
 	
-	
 	public List<Empresa> getEmpresa() {
+		
 		return Banco.lista;
+		
 	}
-
+	
+	
 }
